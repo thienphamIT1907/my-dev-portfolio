@@ -1,0 +1,17 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+echo "Checking commit before push..."
+echo "******************************"
+
+echo "Checking ESlint..."
+echo "--------------------------------"
+yarn lint
+
+echo "Checking Prettier"
+echo "--------------------------------"
+yarn pretty
+
+
+echo "--------------------------------"
+echo "Husky Done..."

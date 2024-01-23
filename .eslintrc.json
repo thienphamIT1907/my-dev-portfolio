@@ -1,0 +1,150 @@
+{
+  "extends": ["next", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    /* PRETTIER */
+    "prettier/prettier": "error",
+
+    /* REACT HOOKS RULES */
+    "react-hooks/rules-of-hooks": 2,
+    "react-hooks/exhaustive-deps": 2,
+    "react/jsx-curly-brace-presence": 0,
+
+    /* REACT RULES */
+    "react/no-array-index-key": 0,
+    "react/destructuring-assignment": 0,
+    "react/jsx-props-no-spreading": 0,
+    "react/sort-default-props": [
+      1,
+      {
+        "ignoreCase": true
+      }
+    ],
+    "react/jsx-uses-react": 1,
+    "react/prop-types": [
+      1,
+      {
+        "ignore": ["children"]
+      }
+    ],
+    "react/require-default-props": 0,
+    "react/forbid-prop-types": 0,
+    "react/react-in-jsx-scope": 0,
+    "react/no-danger": 0,
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx", ".json", ".ts", ".tsx"]
+      }
+    ],
+    "react/jsx-wrap-multilines": [
+      2,
+      {
+        "declaration": "parens-new-line"
+      }
+    ],
+
+    /* ESLINT RULES */
+    "quotes": [
+      1,
+      "single",
+      {
+        "allowTemplateLiterals": true,
+        "avoidEscape": true
+      }
+    ],
+    "comma-dangle": [1, "always-multiline"],
+    "no-unused-vars": "off",
+    "no-shadow": 0,
+    "camelcase": 0,
+    "no-console": 1,
+    "no-empty-function": 1,
+    "no-use-before-define": 0,
+    "no-nested-ternary": 2,
+    "arrow-body-style": [2, "as-needed"],
+    "no-unneeded-ternary": ["error"],
+    "no-else-return": [
+      2,
+      {
+        "allowElseIf": false
+      }
+    ],
+    "max-params": [2, 5],
+    "no-param-reassign": [
+      2,
+      {
+        "props": true,
+        "ignorePropertyModificationsFor": ["state", "config"]
+      }
+    ],
+    "no-unsafe-optional-chaining": 0,
+    "no-underscore-dangle": 0,
+    "no-plusplus": [
+      2,
+      {
+        "allowForLoopAfterthoughts": true
+      }
+    ],
+    "func-names": [2, "never"],
+
+    /* JSX ACCESSIBILITY RULES */
+    "jsx-a11y/label-has-for": 0,
+    "jsx-a11y/label-has-associated-control": 0,
+    "jsx-a11y/anchor-is-valid": 0,
+    "jsx-a11y/control-has-associated-label": 0,
+
+    /* IMPORT RULES */
+    "import/no-extraneous-dependencies": 0,
+    "import/no-cycle": 0,
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": [
+          {
+            "group": ["lodash"],
+            "message": "Please use import from ‘lodash-es’ instead."
+          },
+          {
+            "group": ["moment"],
+            "message": "Please use import from ‘dayjs’ instead."
+          },
+          {
+            "group": ["../../*"],
+            "message": "Please use alias import instead of deep parent import"
+          }
+        ]
+      }
+    ],
+
+    /* OTHER RULES */
+    "import/prefer-default-export": 0,
+    "no-mixed-operators": [
+      "error",
+      {
+        "groups": [
+          ["&", "|", "^", "~", "<<", ">>", ">>>"],
+          ["&&", "||"]
+        ]
+      }
+    ],
+    "no-unused-expressions": [
+      "error",
+      {
+        "allowShortCircuit": true,
+        "allowTernary": true
+      }
+    ],
+    "import/no-unresolved": 0,
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "mjs": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ]
+  }
+}
