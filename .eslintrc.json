@@ -1,7 +1,30 @@
 {
   "extends": ["next", "prettier"],
-  "plugins": ["prettier"],
+  "plugins": ["prettier", "perfectionist"],
   "rules": {
+    "perfectionist/sort-named-exports": [
+      "error",
+      {
+        "type": "natural",
+        "order": "asc"
+      }
+    ],
+    "perfectionist/sort-imports": "error",
+    "perfectionist/sort-named-imports": [
+      "error",
+      {
+        "type": "natural",
+        "order": "asc"
+      }
+    ],
+    "perfectionist/sort-jsx-props": [
+      "error",
+      {
+        "type": "natural",
+        "order": "asc",
+        "groups": ["multiline", "unknown", "shorthand"]
+      }
+    ],
     /* PRETTIER */
     "prettier/prettier": "error",
 
@@ -31,12 +54,6 @@
     "react/forbid-prop-types": 0,
     "react/react-in-jsx-scope": 0,
     "react/no-danger": 0,
-    "react/jsx-filename-extension": [
-      1,
-      {
-        "extensions": [".js", ".jsx", ".json", ".ts", ".tsx"]
-      }
-    ],
     "react/jsx-wrap-multilines": [
       2,
       {

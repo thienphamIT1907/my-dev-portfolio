@@ -13,8 +13,8 @@ export default function AntdRegistry({
 
   useServerInsertedHTML(() => (
     <style
-      id="antd"
       dangerouslySetInnerHTML={{ __html: extractStyle(cache, true) }}
+      id="antd"
     ></style>
   ));
 

@@ -8,5 +8,6 @@
   "arrowParens": "always",
   "singleQuote": true,
   "printWidth": 80,
-  "useTabs": false
+  "useTabs": false,
+  "plugins": ["prettier-plugin-tailwindcss"]
 }
