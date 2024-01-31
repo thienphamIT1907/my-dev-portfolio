@@ -1,9 +1,11 @@
 'use client';
 
+import Footer from '@/components/common/Footer';
+
 export default function Home() {
   return (
-    <>
-      <h1>Hello World, welcome to my portfolio</h1>
-    </>
+    <div>
+      <Footer />
+    </div>
   );
 }

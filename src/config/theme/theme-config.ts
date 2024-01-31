@@ -7,6 +7,10 @@ const globalFont = Nunito({
   display: 'swap',
 });
 
-const theme: ThemeConfig = {};
+const theme: ThemeConfig = {
+  token: {
+    fontFamily: 'inherit',
+  },
+};
 
 export default theme;

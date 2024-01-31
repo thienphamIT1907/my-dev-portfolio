@@ -16,6 +16,12 @@ const config: Config = {
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
     },
+    screens: {
+      mobile: { min: '375px' },
+      tablet: { min: '768px' },
+      laptop: { min: '1024px' },
+      desktop: { min: '1280px' },
+    },
   },
   darkMode: 'class',
   plugins: [nextui()],
