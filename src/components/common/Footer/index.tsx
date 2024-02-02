@@ -21,7 +21,7 @@ const Footer = () => (
       <div className="hidden flex-col justify-center tablet:flex">
         <section className="hidden items-center justify-center gap-4 tablet:flex">
           <Avatar
-            className="h-[130px] w-[130px] text-6xl"
+            className="text-6xl"
             name="T"
             src="/images/avatar.jpeg"
             showFallback

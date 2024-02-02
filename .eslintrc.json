@@ -1,6 +1,18 @@
 {
-  "extends": ["next", "prettier"],
+  "root": true,
+  "extends": [
+    "next",
+    "prettier",
+    "plugin:@next/next/recommended",
+    "plugin:tailwindcss/recommended"
+  ],
   "plugins": ["prettier", "perfectionist"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js"],
+      "parser": "@typescript-eslint/parser"
+    }
+  ],
   "rules": {
     "perfectionist/sort-named-exports": [
       "error",
