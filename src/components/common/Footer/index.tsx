@@ -1,4 +1,4 @@
-import CopyRight from '@/components/common/CopyRight';
+import Copyright from '@/components/common/Copyright';
 import SocialHub from '@/components/SocialHub';
 import { Avatar } from '@nextui-org/react';
 
@@ -16,7 +16,7 @@ const Footer = () => (
           <p className=" text-base text-gray-500">Say Hello! to me 👋🏻</p>
           <p className="text-lg">phamanhthien1907@gmail.com</p>
         </section>
-        <CopyRight />
+        <Copyright />
       </section>
       <div className="hidden flex-col justify-center tablet:flex">
         <section className="hidden items-center justify-center gap-4 tablet:flex">

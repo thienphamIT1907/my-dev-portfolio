@@ -2,13 +2,13 @@
 
 import Footer from '@/components/common/Footer';
 import Navbar from '@/components/common/Navbar';
+import { BasicLayoutProps } from '@/types';
 import { Spinner } from '@nextui-org/react';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
-const HomeLayout = ({ children }: any) => {
+const HomeLayout = ({ children }: BasicLayoutProps) => {
   const pathname = usePathname();
-  const { push } = useRouter();
   const [isMounted, setIsMounted] = useState(false);
   useEffect(() => {
     setIsMounted(true);
@@ -29,7 +29,7 @@ const HomeLayout = ({ children }: any) => {
       <main className="mx-auto flex max-w-[1280px] items-center justify-center pt-[12rem]">
         {children}
       </main>
-      <Footer />
+      {pathname !== '/home' && <Footer />}
     </>
   );
 };
