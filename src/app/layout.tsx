@@ -1,3 +1,4 @@
+import { Providers } from '@/app/providers';
 import { nunito } from '@/config/fonts';
 import { META_DATA } from '@/config/metadata';
 import theme from '@/config/theme/theme-config';
@@ -23,7 +24,9 @@ export default function RootLayout({
       <body>
         <StyledComponentsRegistry>
           <AntdRegistry>
-            <ConfigProvider theme={theme}>{children}</ConfigProvider>
+            <Providers>
+              <ConfigProvider theme={theme}>{children}</ConfigProvider>
+            </Providers>
           </AntdRegistry>
         </StyledComponentsRegistry>
       </body>

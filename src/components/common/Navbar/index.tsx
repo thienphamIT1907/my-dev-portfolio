@@ -1,3 +1,4 @@
+import ThemeToggleButton from '@/components/buttons/ThemeToggleButton';
 import { ROUTES_PATH } from '@/routes';
 import { Tab, Tabs } from '@nextui-org/react';
 import { usePathname, useRouter } from 'next/navigation';
@@ -9,6 +10,7 @@ const Navbar = () => {
   const [selectedTab, setSelectedTab] = useState(pathname);
 
   const handleSelectTabChange = (keyTab: Key) => {
+    if (keyTab === 'theme') return;
     push(String(keyTab));
     setSelectedTab(String(keyTab));
   };
@@ -16,7 +18,7 @@ const Navbar = () => {
   const renderNavbarRoutes = () =>
     ROUTES_PATH.map(({ path, title }) => (
       <Tab
-        className="px-4 text-base tablet:p-6 tablet:text-lg"
+        className="p-3 text-sm tablet:p-6 tablet:text-lg"
         key={path}
         title={title}
       ></Tab>
@@ -32,6 +34,11 @@ const Navbar = () => {
         selectedKey={selectedTab}
       >
         {renderNavbarRoutes()}
+        <Tab
+          className="px-3 text-medium tablet:p-6 tablet:text-lg"
+          key="theme"
+          title={<ThemeToggleButton />}
+        />
       </Tabs>
     </div>
   );

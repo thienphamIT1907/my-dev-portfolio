@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const ThemeToggleStyled = styled.div`
+const ThemeToggleButtonStyled = styled.button`
   .mode-toggle {
     background-color: black;
     width: 30px;
@@ -68,4 +68,4 @@ const ThemeToggleStyled = styled.div`
   }
 `;
 
-export default ThemeToggleStyled;
+export default ThemeToggleButtonStyled;

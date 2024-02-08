@@ -4,12 +4,13 @@ import Footer from '@/components/common/Footer';
 import Navbar from '@/components/common/Navbar';
 import { BasicLayoutProps } from '@/types';
 import { Spinner } from '@nextui-org/react';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
 const HomeLayout = ({ children }: BasicLayoutProps) => {
   const pathname = usePathname();
   const [isMounted, setIsMounted] = useState(false);
+
   useEffect(() => {
     setIsMounted(true);
   }, []);
