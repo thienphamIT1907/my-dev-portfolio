@@ -1,4 +1,4 @@
-import Copyright from '@/components/common/Copyright';
+import Copyright from '@/components/common/CopyRight';
 import SocialHub from '@/components/SocialHub';
 import { Avatar } from '@nextui-org/react';
 

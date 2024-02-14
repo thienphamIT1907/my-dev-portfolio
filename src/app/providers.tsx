@@ -2,14 +2,14 @@
 
 import { BasicLayoutProps } from '@/types';
 import { NextUIProvider } from '@nextui-org/react';
-import { ThemeProvider as NextThemesProvider } from 'next-themes';
+import { ThemeProvider } from 'next-themes';
 
-export function Providers({ children }: BasicLayoutProps) {
+export function UIProviders({ children }: BasicLayoutProps) {
   return (
     <NextUIProvider>
-      <NextThemesProvider attribute="class" defaultTheme="dark">
+      <ThemeProvider attribute="class" defaultTheme="light">
         {children}
-      </NextThemesProvider>
+      </ThemeProvider>
     </NextUIProvider>
   );
 }

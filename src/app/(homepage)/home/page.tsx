@@ -1,9 +1,5 @@
 import Introduction from '@/components/Introduction';
 
-const Homepage = () => (
-  <div>
-    <Introduction />
-  </div>
-);
+const Homepage = () => <Introduction />;
 
 export default Homepage;

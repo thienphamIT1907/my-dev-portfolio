@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react';
 import { RiMoonFill, RiSunFill } from 'react-icons/ri';
 
 const ThemeToggleButton = () => {
-  const { setTheme } = useTheme();
+  const { theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(false);
 
@@ -18,6 +18,7 @@ const ThemeToggleButton = () => {
 
   const handleSwitchTheme = () => {
     setIsDarkMode(!isDarkMode);
+    setTheme(theme === 'dark' ? 'light' : 'dark');
   };
 
   return (

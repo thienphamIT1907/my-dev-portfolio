@@ -25,7 +25,7 @@ const Navbar = () => {
     ));
 
   return (
-    <div className="fixed left-[50%] top-[20px] translate-x-[-50%] tablet:top-[50px] ">
+    <div className="fixed left-[50%] top-[20px] z-50 translate-x-[-50%] opacity-85 tablet:top-[25px]">
       <Tabs
         aria-label="Tabs radius"
         defaultSelectedKey={pathname}
